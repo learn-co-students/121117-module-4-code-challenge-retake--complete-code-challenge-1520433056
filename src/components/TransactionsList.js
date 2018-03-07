@@ -7,7 +7,6 @@ const TransactionsList = props => {
       t.description.toLowerCase().includes(props.filter) ||
       t.category.toLowerCase().includes(props.filter)
   );
-  console.log(relevantTransactions);
 
   return (
     <table className="ui celled striped padded table">

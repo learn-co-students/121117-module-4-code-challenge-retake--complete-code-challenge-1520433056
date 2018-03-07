@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
-import { transactions } from "../transactionsData";
 
 class AccountContainer extends Component {
   state = {
@@ -24,12 +23,11 @@ class AccountContainer extends Component {
 
   handleChange = event => {
     this.setState({
-      filter: [event.target.value.toLowerCase()]
+      filter: event.target.value.toLowerCase()
     });
   };
 
   render() {
-    console.log(this.state.filter);
     return (
       <div>
         <Search handleChange={this.handleChange} />
